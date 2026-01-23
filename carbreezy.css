@@ -1,0 +1,1343 @@
+/* ==========================================================
+   CarBreezy — FULL CSS (Desktop unchanged + Responsive add-ons)
+   ✅ Desktop/Laptop styles are exactly your original code
+   ✅ Responsiveness added ONLY via media queries at the bottom
+   ========================================================== */
+
+/* ------------------------------
+   THEME VARIABLES
+   ------------------------------ */
+:root {
+  --dark: #0f1115;
+  --dark-2: #1a1d23;
+  --accent: #f97316;
+  --text: #e5e7eb;
+}
+
+/* ------------------------------
+   GLOBAL RESET
+   ------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--dark);
+  color: var(--text);
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: rgba(11, 13, 17, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.visitor-count {
+  font-size: 14px;
+}
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+.hero {
+  position: relative;
+  height: 95vh;
+  background: url("../images/general/car24.jpeg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  padding: 40px 73px 40px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0.7);
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  color: #fff;
+  /* width: 600px; */
+  width: 100%;
+}
+
+.subheading {
+  color: #f97316;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-outline,
+.btn-solid {
+  padding: 12px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #0b0f19;
+}
+
+.btn-solid {
+  background: #f97316;
+  color: #fff;
+}
+
+.btn-solid:hover {
+  background: #9b460a;
+}
+
+/* ==========================================================
+   SERVICES (3 Boxes)
+   ========================================================== */
+.services {
+  background: #0b0f19;
+  color: #fff;
+  position: relative;
+  margin-top: -100px;
+  z-index: 10;
+  width: 100vw;
+}
+
+.service-container {
+  display: flex;
+  /* justify-content: center; */
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+.box {
+  width: 210px;
+  height: 210px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.box:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-10px);
+  border-color: #f97316;
+}
+
+.box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.box i {
+  font-size: 4rem;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-left: 10px;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   ABOUT
+   ========================================================== */
+.about {
+  background: #fff;
+  height: 80vh;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 70px 53px 80px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h4 {
+  color: #f97316;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #0b0f19;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.about-text span {
+  color: #0b0f19;
+  font-weight: 700;
+}
+
+.about-text p {
+  color: #0b0f19;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 650px;
+  height: 450px;
+  border-radius: 10px;
+  object-fit: cover;
+  padding-left: 100px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-45px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ==========================================================
+   CB SERVICES (Grid of service cards)
+   ========================================================== */
+.cb-services {
+  background: var(--dark);
+  padding: 70px 0px 55px;
+}
+
+.cb-services__wrap {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.cb-services__grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1.05fr 1.15fr 0.9fr;
+  grid-template-areas:
+    "intro airport business"
+    "intercity airport charter";
+  align-items: stretch;
+}
+
+.cb-services__intro {
+  grid-area: intro;
+  padding: 10px 6px;
+}
+
+.cb-services__intro h2 {
+  font-size: clamp(24px, 2.8vw, 38px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.cb-services__intro p {
+  color: rgba(229, 231, 235, 0.72);
+  line-height: 1.65;
+  max-width: 390px;
+  font-size: 13.5px;
+}
+
+.cb-service-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+  height: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.32);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.cb-service-card2 {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  display: block;
+  height: 650px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.32);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.cb-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(249, 115, 22, 0.55);
+}
+
+.cb-service-card2:hover {
+  transform: translateY(-4px);
+  border-color: rgba(249, 115, 22, 0.55);
+}
+
+.cb-service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.02) brightness(0.95);
+}
+
+.cb-service-card2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.02) brightness(0.95);
+}
+
+.cb-service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.cb-service-card__tag {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0b0f19;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.cb-service-card--intercity {
+  grid-area: intercity;
+  min-height: 100px;
+}
+.cb-service-card--airport {
+  grid-area: airport;
+  min-height: 200px;
+}
+.cb-service-card--business {
+  grid-area: business;
+  min-height: 95px;
+}
+.cb-service-card--charter {
+  grid-area: charter;
+  min-height: 95px;
+}
+
+/* ==========================================================
+   CARS SECTION
+   ========================================================== */
+.cbCars {
+  padding: 80px 70px;
+  background: radial-gradient(
+    circle at top,
+    #0f1115 0%,
+    #0b0d11 60%,
+    #07080b 100%
+  );
+  color: #e5e7eb;
+}
+
+.cbCars__filters {
+  display: grid;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.cbCars__row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  justify-content: center;
+}
+
+.cbCars__row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cbCars__row::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.35);
+  border-radius: 999px;
+}
+
+.cbCars__btn {
+  border: 1px solid rgba(249, 115, 22, 0.55);
+  background: transparent;
+  color: #e5e7eb;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.cbCars__btn:hover {
+  background: rgba(249, 115, 22, 0.15);
+}
+
+.cbCars__btn.is-active {
+  background: #f97316;
+  color: #0f1115;
+  border-color: #f97316;
+}
+
+.cbCars__scroll {
+  height: 80vh;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.cbCars__scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.cbCars__scroll::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.25);
+  border-radius: 999px;
+}
+
+/* titles */
+.cbCars__title {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 20px 0 10px;
+}
+
+.cbCars__subTitle {
+  margin: 25px 0 14px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.cbCars__subTitle--space {
+  margin-top: 40px;
+}
+
+.cbCars__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.cbCard {
+  border: 2px solid rgba(229, 231, 235, 0.35);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(15, 17, 21, 0.35);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cbCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(249, 115, 22, 0.75);
+}
+
+.cbCard__img {
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cbCard__name {
+  text-align: center;
+  margin: 14px 0 4px;
+  font-weight: 700;
+}
+
+.cbCard__price {
+  text-align: center;
+  margin: 0;
+  color: rgba(229, 231, 235, 0.9);
+}
+
+/* (Your original responsive rules for cbCars grid) */
+@media (max-width: 1100px) {
+  .cbCars__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .cbCars {
+    padding: 60px 18px;
+  }
+  .cbCars__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   MODAL (CB)
+   ========================================================== */
+.cbModal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 9999;
+}
+
+.cbModal.is-open {
+  display: grid;
+}
+
+.cbModal__box {
+  width: min(980px, 100%);
+  background: #0f1115;
+  color: #e5e7eb;
+  border: 1px solid rgba(229, 231, 235, 0.18);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cbModal__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.12);
+}
+
+.cbModal__close {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(229, 231, 235, 0.18);
+  background: transparent;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.cbModal__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 14px;
+}
+
+@media (max-width: 900px) {
+  .cbModal__body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cbModal__media {
+  border: 1px solid rgba(229, 231, 235, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.cbModal__media img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cbModal__price {
+  padding: 12px 14px 0;
+  font-weight: 900;
+  color: #f97316;
+}
+
+.cbModal__desc {
+  padding: 8px 14px 14px;
+  margin: 0;
+  color: rgba(229, 231, 235, 0.75);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   TABS
+   ========================================================== */
+.cbTabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.cbTabs__tab {
+  border: 1px solid rgba(249, 115, 22, 0.55);
+  background: transparent;
+  color: #e5e7eb;
+  padding: 10px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cbTabs__tab.is-active {
+  background: #f97316;
+  color: #0f1115;
+  border-color: #f97316;
+}
+
+.cbTabs__panel {
+  border: 1px solid rgba(229, 231, 235, 0.12);
+  border-radius: 14px;
+  padding: 12px;
+  color: rgba(229, 231, 235, 0.8);
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.cbTabs__panel ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* ==========================================================
+   FILTERS (CB)
+   ========================================================== */
+.cbFilters {
+  width: 100%;
+  margin: 30px auto 40px;
+  padding: 18px 18px 14px;
+  border: 1px solid rgba(229, 231, 235, 0.12);
+  background: rgba(15, 17, 21, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.cbFilters__row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  padding-top: 16px;
+}
+
+.cbFilters__row::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(229, 231, 235, 0.55);
+}
+
+.cbFilters__btn {
+  width: 80%;
+  padding: 10px 0;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid rgba(249, 115, 22, 0.55);
+  background: transparent;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.cbFilters__btn:hover {
+  background: rgba(249, 115, 22, 0.14);
+}
+
+.cbFilters__btn.is-active {
+  background: #f97316;
+  color: #0f1115;
+  border-color: #f97316;
+}
+
+/* ==========================================================
+   OFFERS SECTION
+   ========================================================== */
+.cb-offers {
+  position: relative;
+  padding: 72px 16px;
+  background: url("../images/general/BI.jpeg") no-repeat center/cover;
+  color: #fff;
+  z-index: 1;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.cb-offers::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.82);
+  z-index: -1;
+}
+
+.cb-offers__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cb-offers__title {
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f97316;
+}
+
+.cb-offers__subtitle {
+  margin: 10px 0 44px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cb-offers__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  justify-items: center;
+}
+
+.cb-offer {
+  width: 100%;
+  max-width: 260px;
+  padding: 12px 10px 6px;
+}
+
+.cb-offer__icon {
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 14px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) inset;
+}
+
+.cb-offer__icon:hover {
+  transform: translateY(-6px);
+  border: 1px solid #9b460a;
+  box-shadow: 0 4px 10px rgba(247, 170, 5, 0.3);
+}
+
+.cb-offer__icon i {
+  font-size: 34px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.cb-offer__heading {
+  margin: 6px 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.cb-offer__text {
+  margin: 0 auto;
+  max-width: 260px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ==========================================================
+   GALLERY
+   ========================================================== */
+.gallery {
+  padding: 40px 57px 40px;
+  background-color: white;
+}
+
+.gallery h2 {
+  margin-bottom: 10px;
+  color: #f97316;
+  font-size: clamp(24px, 2.8vw, 38px);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.img-box1 {
+  height: 300px;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid #f97316;
+  border-radius: 10px;
+}
+
+.img-box1 img {
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+}
+
+.img-box1:hover {
+  transform: translateY(-6px);
+  border: 1px solid #9b460a;
+  box-shadow: 0 4px 10px rgb(247, 158, 5);
+}
+
+.img-box2 {
+  height: 300px;
+  border: 1px solid #f97316;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.img-box2 img {
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+}
+
+.img-box2:hover {
+  transform: translateY(-6px);
+  border: 1px solid #9b460a;
+  box-shadow: 0 4px 10px rgb(247, 158, 5);
+}
+
+.img-box3 {
+  height: 300px;
+  border: 1px solid #f97316;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.img-box3 img {
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+}
+
+.img-box3:hover {
+  transform: translateY(-6px);
+  border: 1px solid #9b460a;
+  box-shadow: 0 4px 10px rgb(247, 158, 5);
+}
+
+.img-box4 {
+  height: 300px;
+  border: 1px solid #f97316;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.img-box4 img {
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+.img-box4:hover {
+  transform: translateY(-6px);
+  border: 1px solid #9b460a;
+  box-shadow: 0 4px 10px rgb(247, 158, 5);
+}
+
+/* ==========================================================
+   INFO + MODAL (your other modal)
+   ========================================================== */
+.info {
+  padding: 40px;
+}
+
+
+.info.dark {
+  background: #0b0d11;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background: var(--dark-2);
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 520px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  margin-top: 15px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px;
+  background: #2a2d35;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--accent);
+  color: #000;
+}
+
+.tab-content {
+  display: none;
+  padding: 12px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ==========================================================
+   TICKER
+   ========================================================== */
+.ticker {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.ticker span {
+  white-space: nowrap;
+  display: inline-block;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ==========================================================
+   ==========================================================
+   RESPONSIVE LAYERS (ONLY below this point)
+   Desktop/Laptop view remains unchanged above ✅
+   ==========================================================
+   ========================================================== */
+
+/* ------------------------------
+   A) Tablets / smaller laptops (<= 1024px)
+   ------------------------------ */
+@media (max-width: 1024px) {
+  /* HEADER */
+  .header {
+    padding: 14px 18px; /* tighter spacing */
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 34px 28px;
+    height: 90vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+  }
+
+  /* SERVICES */
+  .service-container {
+    justify-content: center; /* centers the boxes */
+    padding-top: 40px;
+  }
+
+  /* ABOUT (stack and prevent overflow) */
+  .about {
+    height: auto; /* stops hard 80vh from squishing content */
+    padding-bottom: 40px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 60px 28px 40px;
+    gap: 28px;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    padding-left: 0;
+    animation: none; /* optional: smoother on tablets */
+  }
+
+  /* CB SERVICES GRID -> 2 columns */
+  .cb-services__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "intro intro"
+      "airport business"
+      "intercity charter";
+  }
+
+  .cb-service-card {
+    height: 280px;
+  }
+
+  .cb-service-card2 {
+    height: 540px;
+  }
+
+  /* OFFERS -> 2 columns */
+  .cb-offers {
+    height: auto; /* allow content to define height */
+    padding: 64px 16px;
+  }
+
+  .cb-offers__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  /* GALLERY + INFO spacing */
+  .gallery {
+    padding: 40px 28px;
+  }
+
+  .info {
+    padding: 32px 22px;
+  }
+}
+
+/* ------------------------------
+   B) Large phones / small tablets (<= 768px)
+   ------------------------------ */
+@media (max-width: 768px) {
+  /* HEADER: wrap content instead of squishing */
+  .header {
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 12px 14px;
+  }
+
+  .visitor-count {
+    width: 100%;
+    opacity: 0.85;
+    font-size: 13px;
+  }
+
+  /* NAV: wrap & make tap-friendly */
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav a {
+    margin: 0;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  /* HERO: smaller text + buttons stack */
+  .hero {
+    padding: 28px 16px;
+    height: 88vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .btn-outline,
+  .btn-solid {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* SERVICES boxes: allow them to grow, not fixed */
+  .box {
+    width: min(320px, 100%);
+    height: auto;
+    padding: 14px;
+  }
+
+  .box i {
+    font-size: 3rem;
+  }
+
+  /* ABOUT: tighter type */
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  /* CB SERVICES -> single column */
+  .cb-services__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "airport"
+      "business"
+      "intercity"
+      "charter";
+  }
+
+  .cb-service-card,
+  .cb-service-card2 {
+    height: 260px;
+  }
+
+  /* CB FILTERS: allow wrap so buttons don't overflow */
+  .cbFilters__row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cbFilters__btn {
+    width: 100%;
+  }
+
+  /* OFFERS: keep 2 columns but allow better fit */
+  .cb-offer {
+    max-width: 320px;
+  }
+
+  /* GALLERY: reduce image height */
+  .img-box1,
+  .img-box2,
+  .img-box3,
+  .img-box4 {
+    height: auto;
+  }
+
+  .img-box1 img,
+  .img-box2 img,
+  .img-box3 img,
+  .img-box4 img {
+    height: 240px;
+  }
+
+  /* YOUR OTHER MODAL: keep it readable on phones */
+  .modal-content {
+    margin: 20% auto;
+    width: 92%;
+  }
+}
+
+/* ------------------------------
+   C) Small phones (<= 480px)
+   ------------------------------ */
+@media (max-width: 480px) {
+  /* HEADER */
+  .logo {
+    font-size: 20px;
+  }
+
+  /* HERO: avoid overflow on tiny screens */
+  .hero {
+    height: auto;
+    min-height: 78vh;
+    padding: 24px 14px;
+  }
+
+  .subheading {
+    font-size: 0.8rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+
+  /* SERVICES: reduce overlap so it doesn't hide content */
+  .services {
+    margin-top: -70px;
+  }
+
+  .service-container {
+    padding-top: 34px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    padding: 46px 16px 28px;
+  }
+
+  /* OFFERS -> 1 column */
+  .cb-offers__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* GALLERY */
+  .gallery {
+    padding: 34px 16px;
+  }
+
+  /* cbCars subtitle smaller */
+  .cbCars__subTitle {
+    font-size: 16px;
+  }
+
+  /* TICKER text smaller */
+  .ticker {
+    padding: 8px;
+  }
+
+  .ticker span {
+    font-size: 13px;
+  }
+}
+
+/* ------------------------------
+   D) Accessibility: reduce motion
+   ------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .about-image img {
+    animation: none !important;
+  }
+  .ticker span {
+    animation: none !important;
+  }
+}

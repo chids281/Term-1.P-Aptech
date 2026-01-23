@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =====================================================
+      BASIC META SETTINGS
+      - charset: ensures text renders properly
+      - viewport: makes the layout responsive on phones/tablets
+    ====================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Website title shown on the browser tab -->
+    <title>CarBreezy</title>
+
+    <!-- =====================================================
+      MAIN STYLESHEET
+      - All project styling is written in css/carbreezy.css
+    ====================================================== -->
+    <link rel="stylesheet" href="./carbreezy.css" />
+
+    <!-- =====================================================
+      ICON LIBRARY (Boxicons)
+      - Used for icons in hero/service/offers sections
+    ====================================================== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+      GOOGLE FONT (Manrope)
+      - Used for typography and improved UI appearance
+    ====================================================== -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- =====================================================
+      HEADER / NAVIGATION BAR
+      - Fixed header remains visible during scrolling
+      - Navigation links scroll to the matching section IDs
+      - Visitor counter shows total visits stored in localStorage
+    ====================================================== -->
+    <header class="header">
+      <!-- Brand logo -->
+      <div class="logo">Car<span>Breezy</span></div>
+
+      <!-- Main navigation links (anchor links) -->
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Service</a>
+
+        <!-- IMPORTANT: These IDs must match section IDs exactly -->
+        <a href="#brands">Brands</a>
+        <a href="#offers">Offers</a>
+
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Visitor counter (populated by JavaScript) -->
+      <div class="visitor-count">Visitors: <span id="visitors">0</span></div>
+    </header>
+
+    <!-- =====================================================
+      HERO SECTION
+      - Large intro section with background image (set in CSS)
+      - Overlay makes text readable on top of the image
+      - Contains a CTA button and feature/service boxes
+    ====================================================== -->
+    <section class="hero" id="home">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <!-- Hero tagline -->
+          <p class="subheading">FIND IT.LOVE IT.DRIVE IT.</p>
+
+          <!-- Main hero headline -->
+          <h1>
+            Your Car Experience,<br />
+            Refined and Perfected.
+          </h1>
+
+          <!-- Supporting hero description -->
+          <p class="hero-text">
+            Discover and Experience the Breeze of Effortless Travel with our
+            Vehicles.
+          </p>
+
+          <!-- CTA button - scrolls user to About section -->
+          <div class="hero-buttons">
+            <a href="#about" class="btn-solid">Get Started</a>
+          </div>
+
+          <!-- =================================================
+            FEATURE BOXES
+            - Shows 3 key benefits of CarBreezy
+            - Icons come from Boxicons library
+          ================================================== -->
+          <div class="service-container">
+            <div class="box">
+              <i class="bx bx-credit-card-alt"></i>
+              <h3>WIDE SELECTION</h3>
+              <p>Access multiple brands with new and used vehicles.</p>
+            </div>
+
+            <div class="box">
+              <i class="bx bxs-network-chart"></i>
+              <h3>SMART FILTERING</h3>
+              <p>Quickly find cars that match your needs.</p>
+            </div>
+
+            <div class="box">
+              <i class="bx bxl-joomla"></i>
+              <h3>TRANSPARENT PRICING</h3>
+              <p>Clear costs and detailed car information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+      ABOUT SECTION
+      - Explains what CarBreezy is and its purpose
+      - Contains text + image layout
+    ====================================================== -->
+    <section id="about" class="about info">
+      <div class="about-container">
+        <div class="about-text">
+          <h4>— ABOUT CARBREEZY</h4>
+
+          <!-- NOTE: you can update the heading wording here -->
+          <h2>Where Great Deals <span>Meet Great</span> Cars</h2>
+
+          <p>
+            CarBreezy is a comprehensive, single-page responsive web application
+            designed to revolutionize the car buying and selling experience. The
+            platform serves as a digital automotive marketplace that connects
+            consumers with a vast inventory of new and pre-owned vehicles from
+            multiple brands.
+          </p>
+
+          <!-- Team / group info for school project -->
+          <div class="profile">
+            <div>
+              <h4>GROUP 1</h4>
+              <p>Office Chief - CTO</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- About image -->
+        <div class="about-image">
+          <img
+            src="/images/general/_MyStyle25__Carwallpaper__BMW-removebg-preview.png"
+            alt="BMW vehicle illustration"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+      SERVICES SECTION
+      - Displays different service offerings as image cards
+      - Clicking a card sends the user to the contact section
+    ====================================================== -->
+    <section id="services" class="cb-services">
+      <div class="cb-services__wrap">
+        <div class="cb-services__grid">
+          <!-- Intro text -->
+          <div class="cb-services__intro">
+            <h2>Our Services</h2>
+            <p>
+              We understand that every journey is unique, and we strive to
+              accommodate your individual needs with premium cars, verified
+              listings, and smooth delivery options.
+            </p>
+          </div>
+
+          <!-- Service cards -->
+          <a href="#contact" class="cb-service-card cb-service-card--intercity">
+            <img src="./images/general/user1.jfif" alt="Intercity Trips" />
+            <span class="cb-service-card__tag">Intercity Trips</span>
+          </a>
+
+          <a href="#contact" class="cb-service-card2 cb-service-card--airport">
+            <img src="./images/general/Gal4.jfif" alt="Airport Transfer" />
+            <span class="cb-service-card__tag">Airport Transfer</span>
+          </a>
+
+          <a href="#contact" class="cb-service-card cb-service-card--business">
+            <img src="./images/general/user2.jfif" alt="Business Meeting" />
+            <span class="cb-service-card__tag">Business Meeting</span>
+          </a>
+
+          <a href="#contact" class="cb-service-card cb-service-card--charter">
+            <img src="./images/general/user3.jfif" alt="Charter Service" />
+            <span class="cb-service-card__tag">Charter Service</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+      BRANDS / CARS SECTION (Filters + Car Grids)
+      IMPORTANT:
+      - The nav link uses href="#brands"
+      - So the section ID MUST be exactly "brands"
+    ====================================================== -->
+    <section class="cbCars" id="brands">
+      <!-- Filter controls (Type, Brand, Condition) -->
+      <div class="cbFilters">
+        <!-- TYPE FILTER ROW -->
+        <div class="cbFilters__row" id="cbTypeRow" data-label="Type">
+          <button class="cbFilters__btn is-active" data-type="all">All</button>
+          <button class="cbFilters__btn" data-type="Hatchback">Hatchbacks</button>
+          <button class="cbFilters__btn" data-type="Sedan">Sedan</button>
+          <button class="cbFilters__btn" data-type="SUV">SUV</button>
+          <button class="cbFilters__btn" data-type="Convertible">Convertibles</button>
+        </div>
+
+        <!-- BRAND FILTER ROW -->
+        <div class="cbFilters__row" id="cbBrandRow" data-label="Brand">
+          <button class="cbFilters__btn is-active" data-brand="BMW">BMW</button>
+          <button class="cbFilters__btn" data-brand="Toyota">Toyota</button>
+          <button class="cbFilters__btn" data-brand="Honda">Honda</button>
+          <button class="cbFilters__btn" data-brand="Mercedes">Mercedes</button>
+        </div>
+
+        <!-- CONDITION FILTER ROW -->
+        <div class="cbFilters__row" id="cbCondRow" data-label="Condition">
+          <button class="cbFilters__btn is-active" data-cond="all">All</button>
+          <button class="cbFilters__btn" data-cond="new">New</button>
+          <button class="cbFilters__btn" data-cond="used">Used</button>
+        </div>
+      </div>
+
+      <!-- Right side scroll area holding the car cards -->
+      <div class="cbCars__scroll">
+        <!-- Title updates based on selected brand -->
+        <h2 class="cbCars__title" id="cbBrandTitle">BMW Cars</h2>
+
+        <!-- New cars grid -->
+        <h3 class="cbCars__subTitle">New</h3>
+        <div class="cbCars__grid" id="cbNewGrid"></div>
+
+        <!-- Used cars grid -->
+        <h3 class="cbCars__subTitle cbCars__subTitle--space">Used</h3>
+        <div class="cbCars__grid" id="cbUsedGrid"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+      CAR DETAILS MODAL (MAIN MODAL USED BY THE JS SYSTEM)
+      - Hidden until JS adds .is-open
+      - Shows image, price, description, and specification tabs
+    ====================================================== -->
+    <div class="cbModal" id="cbModal" aria-hidden="true">
+      <div class="cbModal__box" role="dialog" aria-modal="true">
+        <div class="cbModal__head">
+          <div>
+            <h3 id="mName" class="cbModal__name">Car Name</h3>
+            <p id="mMeta" class="cbModal__meta">Brand • Type • Condition</p>
+          </div>
+
+          <!-- Close button triggers closeModal() -->
+          <button id="mClose" class="cbModal__close" aria-label="Close">
+            ✕
+          </button>
+        </div>
+
+        <div class="cbModal__body">
+          <!-- Image + price + short description -->
+          <div class="cbModal__media">
+            <img id="mImg" alt="Car image" />
+            <div id="mPrice" class="cbModal__price">₦0</div>
+            <p id="mDesc" class="cbModal__desc"></p>
+          </div>
+
+          <!-- Tabs + specs content -->
+          <div class="cbModal__specs">
+            <div class="cbTabs" id="mTabs">
+              <button class="cbTabs__tab is-active" data-tab="internal">
+                Internal Specification
+              </button>
+              <button class="cbTabs__tab" data-tab="external">External</button>
+              <button class="cbTabs__tab" data-tab="engine">Engine</button>
+              <button class="cbTabs__tab" data-tab="dimensions">Dimensions</button>
+            </div>
+
+            <!-- JS injects tab HTML here -->
+            <div id="mTabContent" class="cbTabs__panel"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+      OFFERS SECTION
+      IMPORTANT:
+      - Nav uses href="#offers"
+      - So section ID MUST be exactly "offers"
+    ====================================================== -->
+    <section class="cb-offers" id="offers">
+      <div class="cb-offers__container">
+        <h2 class="cb-offers__title">Special Offers</h2>
+        <p class="cb-offers__subtitle">CarBreezy’s Friendly Guide</p>
+
+        <div class="cb-offers__grid">
+          <!-- Each offer is a card -->
+          <article class="cb-offer">
+            <div class="cb-offer__icon"><i class="bx bx-calendar-star"></i></div>
+            <h3 class="cb-offer__heading">Weekend Deals</h3>
+            <p class="cb-offer__text">
+              Save on selected cars every weekend. Limited slots—grab your deal fast.
+            </p>
+          </article>
+
+          <article class="cb-offer">
+            <div class="cb-offer__icon"><i class="bx bx-refresh"></i></div>
+            <h3 class="cb-offer__heading">Trade-In Bonus</h3>
+            <p class="cb-offer__text">
+              Get an instant bonus when you trade in your car. Quick valuation, easy upgrade.
+            </p>
+          </article>
+
+          <article class="cb-offer">
+            <div class="cb-offer__icon"><i class="bx bx-badge-check"></i></div>
+            <h3 class="cb-offer__heading">Verified Listings</h3>
+            <p class="cb-offer__text">
+              Only verified sellers and checks, so you can shop confidently and safely.
+            </p>
+          </article>
+
+          <article class="cb-offer">
+            <div class="cb-offer__icon"><i class="bx bx-money-withdraw"></i></div>
+            <h3 class="cb-offer__heading">Low Deposit</h3>
+            <p class="cb-offer__text">
+              Flexible deposits on select cars so you can lock in a deal without stress.
+            </p>
+          </article>
+
+          <article class="cb-offer">
+            <div class="cb-offer__icon"><i class="bx bx-credit-card"></i></div>
+            <h3 class="cb-offer__heading">Pay Monthly</h3>
+            <p class="cb-offer__text">
+              Spread payments across months with simple plans and clear breakdowns.
+            </p>
+          </article>
+
+          <article class="cb-offer">
+            <div class="cb-offer__icon"><i class="bx bx-gas-pump"></i></div>
+            <h3 class="cb-offer__heading">Fuel Saver Picks</h3>
+            <p class="cb-offer__text">
+              Curated fuel-efficient cars that help you spend less at the pump.
+            </p>
+          </article>
+
+          <article class="cb-offer">
+            <div class="cb-offer__icon"><i class="bx bx-cog"></i></div>
+            <h3 class="cb-offer__heading">Free Service Pack</h3>
+            <p class="cb-offer__text">
+              On selected offers, get a basic service pack included after purchase.
+            </p>
+          </article>
+
+          <article class="cb-offer">
+            <div class="cb-offer__icon"><i class="bx bx-car"></i></div>
+            <h3 class="cb-offer__heading">Home Delivery</h3>
+            <p class="cb-offer__text">
+              Choose delivery options that fit you—pickup or doorstep drop-off.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+      GALLERY SECTION
+      - Static image grid
+      - Shows featured photos for branding
+    ====================================================== -->
+    <section id="gallery" class="gallery">
+      <h2>Gallery</h2>
+
+      <div class="gallery-grid">
+        <div class="img-box1"><img src="./images/general/Gal4.jfif" alt="Gallery image 1" /></div>
+        <div class="img-box2"><img src="./images/general/Gal5.jfif" alt="Gallery image 2" /></div>
+        <div class="img-box3"><img src="./images/general/Gal7.jfif" alt="Gallery image 3" /></div>
+        <div class="img-box4"><img src="./images/general/Gal1.jfif" alt="Gallery image 4" /></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+      CONTACT SECTION
+      - Provides contact information for support and inquiries
+    ====================================================== -->
+    <section id="contact" class="info dark">
+      <h2>Contact Us</h2>
+
+      <p>
+        For any questions or inquiries, please reach out via our contact section below.
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:support@carbreezy.com">support@carbreezy.com</a>
+      </p>
+
+      <p>
+        Phone:
+        <a href="tel:+2348000000000">+234 800 000 0000</a>
+      </p>
+
+      <p>Address: Lagos, Nigeria</p>
+    </section>
+
+    <!-- =====================================================
+      FOOTER TICKER
+      - JS updates this text every second
+      - Shows date, time, and location (if available)
+    ====================================================== -->
+    <footer class="ticker">
+      <span id="tickerText"></span>
+    </footer>
+
+    <!-- =====================================================
+      MAIN JAVASCRIPT FILE
+      - Loads after page content
+      - Handles filtering, modal, ticker, and visitor counter
+    ====================================================== -->
+    <script src="/carbreezy.js"></script>
+  </body>
+</html>
