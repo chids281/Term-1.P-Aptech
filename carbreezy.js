@@ -15,7 +15,7 @@
 let visits = Number(localStorage.getItem("carbreezy_visits") || 0);
 
 // If you want visits to increase each page refresh, uncomment this:
-visits += 1;
+// visits += 1;
 
 // Save visits back into localStorage
 localStorage.setItem("carbreezy_visits", visits);
