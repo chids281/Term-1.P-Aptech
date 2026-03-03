@@ -1,7 +1,4 @@
 images/Downloads/
 node_modules/
 .DS_Store
-*.jfif
-*.jpg
-*.png
 .env
